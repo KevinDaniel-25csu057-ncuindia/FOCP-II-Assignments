@@ -1,0 +1,44 @@
+#include<iostream>
+using namespace std;
+class Student
+{
+    int rollNo;
+    string name;
+    int marks1,marks2,marks3;
+    public:
+    void inputDetails()//setter
+    {
+        cout<<"\n\nEnter Roll No:";
+        cin>>rollNo;
+        cout<<"Enter your name:";
+        cin>>name;
+        cout<<"Enter the marks of 3 subjects:";
+        cin>>marks1>>marks2>>marks3;
+    }
+    int calculateTotal()
+    {
+        return {marks1+marks2+marks3};
+    }
+    void displayDetails()
+    {
+        cout<<"\n Roll No:"<<rollNo;
+        cout<<"\n Name:"<<name;
+        cout<<"\n Mark 1:"<<marks1<<"\n Mark 2:"<<marks2<<"\n Mark 3:"<<marks3;
+        cout<<"\n Total Marks:"<<calculateTotal();
+    }
+};
+int main()
+{
+    Student s1,s2,s3;
+    s1.inputDetails();
+    s1.calculateTotal();
+    s1.displayDetails();
+    s2.inputDetails();
+    s2.calculateTotal();
+    s2.displayDetails();
+    s3.inputDetails();
+    s3.calculateTotal();
+    s3.displayDetails();
+
+    return 0;
+}
